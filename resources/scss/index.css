@@ -27,7 +27,7 @@ body {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -48,17 +48,17 @@ button:hover {
 
 .contact-btn {
   position: fixed;
-  z-index: 99;
-  bottom: 10%;
+  z-index: 100;
+  bottom: 16%;
   right: 10px;
   display: grid;
   gap: 10px;
 }
 .contact-btn .btn {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8196078431);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   padding: 10px;
@@ -72,7 +72,8 @@ button:hover {
   width: 120px;
   height: 120px;
   position: absolute;
-  right: 20px;
+  top: 3em;
+  right: 1em;
   padding: 5px;
   background-color: white;
   z-index: 99;
@@ -95,11 +96,10 @@ button:hover {
 .container {
   background-color: var(--primary-color);
   max-width: 400px;
-  min-width: 350px;
   margin: auto;
-  padding: 40px;
+  padding: 1.6em;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .container .texture {
   position: absolute;
@@ -108,7 +108,7 @@ button:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url(../images/texture.webp);
+  background-image: url(../images/texture.png);
   background-size: cover;
   mix-blend-mode: luminosity;
   pointer-events: none;
@@ -134,14 +134,14 @@ button:hover {
   cursor: pointer;
   position: absolute;
   z-index: 99;
-  animation: shinning 1.6s ease-in-out infinite;
+  animation: shinning 3s ease-in-out infinite;
   text-transform: uppercase;
 }
 @keyframes shinning {
-  0%, 20%, 70% {
+  0%, 5%, 15%, 25% {
     filter: brightness(1);
   }
-  40%, 50% {
+  10%, 20% {
     filter: brightness(1.5);
   }
 }
@@ -151,14 +151,12 @@ button:hover {
   position: absolute;
   left: 0;
   top: 200px;
-  background-color: white;
   z-index: 20;
   text-align: center;
   display: flex;
   opacity: 0;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0.6em;
   box-sizing: border-box;
   transition: all 0.6s ease;
 }
@@ -172,6 +170,8 @@ button:hover {
   font-weight: bold;
   text-transform: uppercase;
   padding: 5px 20px;
+  margin-bottom: 20px;
+  margin-top: 50px;
   letter-spacing: 2px;
 }
 .container .experience-container .date-wrapper {
@@ -179,11 +179,11 @@ button:hover {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  font-size: 30px;
+  font-size: 1.8em;
 }
 .container .experience-container .date-wrapper .date {
   font-family: etg;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 }
 .container .experience-container .date-wrapper .date span {
   display: block;
@@ -193,7 +193,9 @@ button:hover {
   letter-spacing: 0px;
 }
 .container .experience-container .date-wrapper .arrow-icon {
-  padding: 20px;
+  padding: 0px 0.6em;
+  margin-top: 10px;
+  box-sizing: content-box;
   width: 30px;
   height: 20px;
 }
@@ -201,21 +203,25 @@ button:hover {
   padding-bottom: 20px;
   position: relative;
   width: 90%;
+  font-size: 0.95em;
   margin: auto;
   text-align: justify;
   -moz-text-align-last: center;
        text-align-last: center;
   color: rgb(81, 81, 81);
   margin-bottom: 20px;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 .container .experience-container .desciption span {
   display: block;
   font-weight: bold;
   color: black;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .container .experience-container .experience {
   position: relative;
+  top: 0;
 }
 .container .experience-container .experience::after {
   content: "";
@@ -249,7 +255,6 @@ button:hover {
 .container .skill-container .skill-wrapper {
   border: 1px solid gray;
   position: relative;
-  max-height: 680px;
 }
 .container .skill-container .skill-wrapper::before {
   content: "";
@@ -273,17 +278,17 @@ button:hover {
   bottom: 0;
   right: 0;
 }
-.container .skill-container .skill-title {
+.container .skill-container .skill-wrapper .skill .skill-title {
   font-size: 18px;
   text-align: center;
-  margin: 20px auto 20px;
+  margin: 60px auto 10px;
 }
 .container .skill-container .skill-set-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  padding: 0.6em;
   box-sizing: border-box;
   padding-bottom: 0px;
   position: relative;
@@ -302,7 +307,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
-  height: 70px;
+  height: 75px;
   align-items: start;
 }
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-icon-wrapper {
@@ -311,7 +316,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 30%;
+  width: 35%;
   opacity: 1;
   transition: all 0.6s ease;
   transform: scale(0);
@@ -320,8 +325,8 @@ button:hover {
   background-color: var(--primary-color);
   position: absolute;
   z-index: 2;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
 }
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-icon-wrapper .skill-set-icon img {
@@ -335,13 +340,14 @@ button:hover {
      object-fit: contain;
 }
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-icon-wrapper .skill-set-mask {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   padding: 2px;
   position: relative;
   background-color: gray;
   border-radius: 7px;
   overflow: hidden;
+  box-sizing: content-box;
 }
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-icon-wrapper .skill-set-mask .mask {
   position: absolute;
@@ -356,9 +362,11 @@ button:hover {
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-description {
   width: 60%;
   color: rgb(196, 196, 196);
-  font-size: 10px;
+  font-size: 0.7em;
   margin-left: 5px;
   animation: moving 1.2s ease;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 @keyframes moving {
   from {
@@ -372,20 +380,25 @@ button:hover {
 }
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-description .percentage {
   color: var(--second-color);
-  font-size: 16px;
+  font-size: 1.4em;
   font-family: etg;
 }
 .container .skill-container .skill-set-wrapper .skill-set .skill-set-description span {
   color: white;
 }
+.container .skill-container .software-proficiency-wrapper .skill-title {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px auto;
+}
 .container .skill-container .software-proficiency-wrapper .software-wrapper {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  gap: 10px;
-  width: 60%;
+  gap: 0.6em;
+  width: calc(60% - 1em);
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   position: relative;
 }
 .container .skill-container .software-proficiency-wrapper .software-wrapper .software {
@@ -429,19 +442,21 @@ button:hover {
 .container .slogan {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 0.3em;
   transform: translateY(-50%) scale(-1);
   color: #a4a4a4;
   white-space: nowrap;
   writing-mode: vertical-lr;
   text-orientation: mixed;
   font-size: 12px;
+  z-index: 50;
 }
 .container .title-wrapper {
   color: var(--second-color);
   font-family: Arial Black;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.2em;
+  margin-top: 20px;
 }
 .container .title-wrapper span {
   color: #c6c5c5;
@@ -450,13 +465,14 @@ button:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 .container .title-wrapper .text {
+  margin-top: -2px;
   font-family: xirod;
-  font-size: 30px;
+  font-size: 1.6em;
 }
 .container .intro-holder {
   background-color: var(--second-color);
-  margin-top: 20px;
-  padding: 30px 20px 30px 20px;
+  margin-top: 12px;
+  padding: 2em 1em 3em 1em;
   position: relative;
 }
 .container .intro-holder::before {
@@ -468,7 +484,7 @@ button:hover {
   border-top: 14px dotted var(--primary-color);
 }
 .container .intro-holder .intro {
-  height: 620px;
+  height: 100%;
   position: relative;
 }
 .container .intro-holder .intro-wrapper {
@@ -520,13 +536,15 @@ button:hover {
   left: 0;
 }
 .container .section {
-  padding: 20px;
+  padding: 1em;
+  padding-right: 0;
   border-left: 2px solid var(--primary-color);
   margin: 10px 0px;
 }
 .container .section .name-wrapper {
   height: 60px;
   position: relative;
+  white-space: nowrap;
 }
 .container .section .name-wrapper::after {
   content: "personal information";
@@ -537,6 +555,7 @@ button:hover {
   letter-spacing: 3.8px;
   position: absolute;
   bottom: 0;
+  white-space: nowrap;
 }
 .container .section .name {
   /* Ensures the content is not revealed until the animation */
@@ -558,7 +577,7 @@ button:hover {
   }
 }
 .container .section .name p {
-  font-size: 36px;
+  font-size: 2.6em;
   font-family: Anton;
   text-transform: uppercase;
   letter-spacing: 0px;
@@ -566,9 +585,10 @@ button:hover {
   transform-origin: left;
 }
 .container .section .name p .space {
-  font-size: 20px;
+  font-size: 0.5em;
 }
 .container .section .name p .surname {
+  display: inline-block;
   letter-spacing: 2px;
   color: var(--second-color);
   paint-order: stroke fill;
@@ -598,7 +618,7 @@ button:hover {
   left: 0;
   padding: 1px 60px 1px 10px;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 1.2em;
   width: -moz-fit-content;
   width: fit-content;
   background-color: var(--primary-color);
@@ -614,7 +634,7 @@ button:hover {
   left: 0;
   padding: 1px 60px 1px 10px;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 1.2em;
   background-color: var(--primary-color);
   color: var(--second-color);
   content: "Nationality";
@@ -628,7 +648,7 @@ button:hover {
   left: 0;
   padding: 1px 60px 1px 10px;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 1.2em;
   background-color: var(--primary-color);
   color: var(--second-color);
   content: "Contact";
@@ -636,7 +656,7 @@ button:hover {
 }
 .container .introduction-section {
   background-color: white;
-  padding: 20px 20px 10px 20px;
+  padding: 1em;
   text-align: center;
   margin-top: 24px;
   position: relative;
@@ -650,6 +670,21 @@ button:hover {
   transform: translateX(-50%);
   top: -26px;
   left: 50%;
+}
+.container .introduction-section #tape-1,
+.container .introduction-section #tape-2 {
+  position: absolute;
+  width: 35px;
+}
+.container .introduction-section #tape-1 {
+  bottom: -80px;
+  right: 0;
+  transform: rotate(-50deg);
+}
+.container .introduction-section #tape-2 {
+  top: -20px;
+  left: -0.5em;
+  transform: rotate(50deg);
 }
 .container .introduction-section .intro-title-wrapper {
   font-size: 21px;
@@ -673,7 +708,7 @@ button:hover {
   margin: auto;
 }
 .container .introduction-section p {
-  margin: 20px;
+  margin: 1.2em 0.5em;
   text-align: justify;
   -moz-text-align-last: center;
        text-align-last: center;
@@ -684,10 +719,10 @@ button:hover {
   justify-content: space-between;
   width: 100%;
   margin: auto;
-  bottom: 0;
+  position: relative;
 }
 .container .button-holder button {
-  width: calc(48% - 5px);
+  width: 48%;
   height: 40px;
   border-radius: 5px;
   font-size: 16px;
@@ -735,4 +770,8 @@ button:hover {
 .container .button-holder-2 #experience {
   z-index: 99;
   bottom: 0;
+}
+.container .button-holder-2 #skill-set:hover,
+.container .button-holder-2 #experience:hover {
+  filter: none;
 }/*# sourceMappingURL=index.css.map */

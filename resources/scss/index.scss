@@ -25,12 +25,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 
+
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 a {
@@ -52,17 +53,17 @@ button:hover {
 
 .contact-btn {
     position: fixed;
-    z-index: 99;
-    bottom: 10%;
+    z-index: 100;
+    bottom: 16%;
     right: 10px;
     display: grid;
     gap: 10px;
 
     .btn {
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
-        background-color: white;
+        background-color: #ffffffd1;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
         cursor: pointer;
         padding: 10px;
@@ -77,7 +78,8 @@ button:hover {
     width: 120px;
     height: 120px;
     position: absolute;
-    right: 20px;
+    top: 3em;
+    right: 1em;
     padding: 5px;
     background-color: white;
     z-index: 99;
@@ -98,15 +100,18 @@ button:hover {
     }
 }
 
+
+
+
 .container {
     background-color: var(--primary-color);
     max-width: 400px;
-    min-width: 350px;
     // height: 100vh;
     margin: auto;
-    padding: 40px;
+    padding: 1.6em;
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+
 
     .texture {
         position: absolute;
@@ -116,7 +121,7 @@ button:hover {
         // background-color: rgb(91, 91, 91);
         top: 0;
         left: 0;
-        background-image: url(../images/texture.webp);
+        background-image: url(../images/texture.png);
         background-size: cover;
         mix-blend-mode: luminosity;
         pointer-events: none;
@@ -145,20 +150,21 @@ button:hover {
             cursor: pointer;
             position: absolute;
             z-index: 99;
-            animation: shinning 1.6s ease-in-out infinite;
+            animation: shinning 3s ease-in-out infinite;
             text-transform: uppercase;
         }
 
         @keyframes shinning {
 
             0%,
-            20%,
-            70% {
+            5%,
+            15%,
+            25% {
                 filter: brightness(1);
             }
 
-            40%,
-            50% {
+            10%,
+            20% {
                 filter: brightness(1.5);
             }
         }
@@ -170,14 +176,13 @@ button:hover {
         position: absolute;
         left: 0;
         top: 200px;
-        background-color: white;
         z-index: 20;
         text-align: center;
         display: flex;
         opacity: 0;
-        align-items: center;
+        // align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: .6em;
         box-sizing: border-box;
         transition: all .6s ease;
 
@@ -190,6 +195,8 @@ button:hover {
             font-weight: bold;
             text-transform: uppercase;
             padding: 5px 20px;
+            margin-bottom: 20px;
+            margin-top: 50px;
             letter-spacing: 2px;
         }
 
@@ -198,7 +205,7 @@ button:hover {
             align-items: center;
             display: flex;
             flex-wrap: wrap;
-            font-size: 30px;
+            font-size: 1.8em;
 
             .date {
                 span {
@@ -210,12 +217,14 @@ button:hover {
                 }
 
                 font-family: etg;
-                letter-spacing: 1.5px;
+                letter-spacing: 2px;
 
             }
 
             .arrow-icon {
-                padding: 20px;
+                padding: 0px .6em;
+                margin-top: 10px;
+                box-sizing: content-box;
                 width: 30px;
                 height: 20px;
             }
@@ -225,23 +234,27 @@ button:hover {
             padding-bottom: 20px;
             position: relative;
             width: 90%;
+            font-size: .95em;
             margin: auto;
             text-align: justify;
             text-align-last: center;
             color: rgb(81, 81, 81);
             margin-bottom: 20px;
+            // word-break: break-all;
+            hyphens: auto;
 
             span {
                 display: block;
                 font-weight: bold;
                 color: black;
-                margin-bottom: 5px;
+                margin-bottom: 2px;
             }
 
         }
 
         .experience {
             position: relative;
+            top: 0;
 
             &::after {
                 content: "";
@@ -279,7 +292,6 @@ button:hover {
         .skill-wrapper {
             border: 1px solid gray;
             position: relative;
-            max-height: 680px;
 
             &::before {
                 content: "";
@@ -302,21 +314,24 @@ button:hover {
                 bottom: 0;
                 right: 0;
             }
+
+            .skill {
+                .skill-title {
+                    font-size: 18px;
+                    text-align: center;
+                    margin: 60px auto 10px;
+                }
+            }
         }
 
-        .skill-title {
-            font-size: 18px;
-            text-align: center;
-            margin: 20px auto 20px;
 
-        }
 
         .skill-set-wrapper {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
             margin: auto;
-            padding: 20px;
+            padding: .6em;
             box-sizing: border-box;
             padding-bottom: 0px;
             position: relative;
@@ -337,7 +352,7 @@ button:hover {
                 flex-wrap: wrap;
                 // padding: 10px 0px;
                 width: 50%;
-                height: 70px;
+                height: 75px;
                 align-items: start;
 
                 .skill-set-icon-wrapper {
@@ -346,19 +361,20 @@ button:hover {
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    width: 30%;
+                    width: 35%;
                     opacity: 1;
                     transition: all .6s ease;
                     transform: scale(0);
+
 
                     .skill-set-icon {
                         background-color: var(--primary-color);
                         position: absolute;
                         z-index: 2;
-                        width: 40px;
-                        height: 40px;
+                        width: 35px;
+                        height: 35px;
                         border-radius: 5px;
-
+                        // box-sizing: content-box;
 
                         img {
                             position: absolute;
@@ -372,13 +388,14 @@ button:hover {
                     }
 
                     .skill-set-mask {
-                        width: 40px;
-                        height: 40px;
+                        width: 35px;
+                        height: 35px;
                         padding: 2px;
                         position: relative;
                         background-color: gray;
                         border-radius: 7px;
                         overflow: hidden;
+                        box-sizing: content-box;
 
                         .mask {
                             position: absolute;
@@ -399,9 +416,10 @@ button:hover {
                 .skill-set-description {
                     width: 60%;
                     color: rgb(196, 196, 196);
-                    font-size: 10px;
+                    font-size: .7em;
                     margin-left: 5px;
                     animation: moving 1.2s ease;
+                    hyphens: auto;
 
                     @keyframes moving {
                         from {
@@ -417,12 +435,13 @@ button:hover {
 
                     .percentage {
                         color: var(--second-color);
-                        font-size: 16px;
+                        font-size: 1.4em;
                         font-family: etg;
                     }
 
                     span {
                         color: white;
+
                     }
                 }
             }
@@ -430,14 +449,20 @@ button:hover {
         }
 
         .software-proficiency-wrapper {
+            .skill-title {
+                font-size: 18px;
+                text-align: center;
+                margin: 10px auto;
+            }
+
             .software-wrapper {
                 display: flex;
                 flex-wrap: wrap;
                 margin: auto;
-                gap: 10px;
-                width: 60%;
+                gap: .6em;
+                width: calc(60% - 1em);
                 justify-content: center;
-                padding-bottom: 50px;
+                padding-bottom: 20px;
                 position: relative;
 
                 // &::after {
@@ -502,20 +527,22 @@ button:hover {
     .slogan {
         position: absolute;
         top: 50%;
-        right: 10px;
+        right: .3em;
         transform: translateY(-50%) scale(-1);
         color: #a4a4a4;
         white-space: nowrap;
         writing-mode: vertical-lr;
         text-orientation: mixed;
         font-size: 12px;
+        z-index: 50;
     }
 
     .title-wrapper {
         color: var(--second-color);
         font-family: Arial Black;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 1.2em;
+        margin-top: 20px;
 
         span {
             color: #c6c5c5;
@@ -525,17 +552,17 @@ button:hover {
         }
 
         .text {
+            margin-top: -2px;
             font-family: xirod;
-            font-size: 30px;
+            font-size: 1.6em;
         }
     }
 
     .intro-holder {
         background-color: var(--second-color);
-        margin-top: 20px;
-        padding: 30px 20px 30px 20px;
+        margin-top: 12px;
+        padding: 2em 1em 3em 1em;
         position: relative;
-        // background-color: red;
         // overflow: hidden;
 
         &::before {
@@ -549,7 +576,7 @@ button:hover {
 
         .intro {
             // background-color: green;
-            height: 620px;
+            height: 100%;
             position: relative;
         }
 
@@ -613,13 +640,15 @@ button:hover {
     }
 
     .section {
-        padding: 20px;
+        padding: 1em;
+        padding-right: 0;
         border-left: 2px solid var(--primary-color);
         margin: 10px 0px;
 
         .name-wrapper {
             height: 60px;
             position: relative;
+            white-space: nowrap;
 
             &::after {
                 content: "personal information";
@@ -631,6 +660,7 @@ button:hover {
                 // margin-top: -3.8px;
                 position: absolute;
                 bottom: 0;
+                white-space: nowrap;
             }
         }
 
@@ -666,7 +696,7 @@ button:hover {
             }
 
             p {
-                font-size: 36px;
+                font-size: 2.6em;
                 font-family: Anton;
                 text-transform: uppercase;
                 letter-spacing: 0px;
@@ -674,7 +704,7 @@ button:hover {
                 transform-origin: left;
 
                 .space {
-                    font-size: 20px;
+                    font-size: .5em;
                 }
 
                 .surname {
@@ -682,7 +712,7 @@ button:hover {
                     //     2px 2px 0 #000,
                     //     2px -2px 0 #000,
                     //     -2px -2px 0 #000;
-
+                    display: inline-block;
                     letter-spacing: 2px;
                     color: var(--second-color);
                     paint-order: stroke fill;
@@ -719,7 +749,7 @@ button:hover {
                         left: 0;
                         padding: 1px 60px 1px 10px;
                         margin-bottom: 5px;
-                        font-size: 18px;
+                        font-size: 1.2em;
                         width: fit-content;
                         background-color: var(--primary-color);
                         color: var(--second-color);
@@ -737,7 +767,7 @@ button:hover {
                         left: 0;
                         padding: 1px 60px 1px 10px;
                         margin-bottom: 5px;
-                        font-size: 18px;
+                        font-size: 1.2em;
                         background-color: var(--primary-color);
                         color: var(--second-color);
                         content: "Nationality";
@@ -754,7 +784,7 @@ button:hover {
                         left: 0;
                         padding: 1px 60px 1px 10px;
                         margin-bottom: 5px;
-                        font-size: 18px;
+                        font-size: 1.2em;
                         background-color: var(--primary-color);
                         color: var(--second-color);
                         content: "Contact";
@@ -767,7 +797,7 @@ button:hover {
 
     .introduction-section {
         background-color: white;
-        padding: 20px 20px 10px 20px;
+        padding: 1em;
         text-align: center;
         margin-top: 24px;
         position: relative;
@@ -781,6 +811,24 @@ button:hover {
             transform: translateX(-50%);
             top: -26px;
             left: 50%;
+        }
+
+        #tape-1,
+        #tape-2 {
+            position: absolute;
+            width: 35px;
+        }
+
+        #tape-1 {
+            bottom: -80px;
+            right: 0;
+            transform: rotate(-50deg);
+        }
+
+        #tape-2 {
+            top: -20px;
+            left: -.5em;
+            transform: rotate(50deg);
         }
 
         .intro-title-wrapper {
@@ -807,7 +855,7 @@ button:hover {
 
         p {
 
-            margin: 20px;
+            margin: 1.2em .5em;
             text-align: justify;
             text-align-last: center;
         }
@@ -819,16 +867,17 @@ button:hover {
         justify-content: space-between;
         width: 100%;
         margin: auto;
-        bottom: 0;
+        position: relative;
 
         button {
-            width: calc(48% - 5px);
+            width: calc(48%);
             height: 40px;
             border-radius: 5px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             border: 1px solid gray;
+
         }
 
         #experience-skills {
@@ -882,9 +931,16 @@ button:hover {
             z-index: 99;
             // color: lightgray;
             bottom: 0;
+
+            &:hover {
+                filter: none;
+            }
         }
 
 
 
     }
 }
+
+
+@media screen and (min-width: 400px) {}
