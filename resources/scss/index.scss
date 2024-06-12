@@ -100,9 +100,6 @@ button:hover {
     }
 }
 
-
-
-
 .container {
     background-color: var(--primary-color);
     max-width: 400px;
@@ -122,7 +119,8 @@ button:hover {
         top: 0;
         left: 0;
         background-image: url(../images/texture.png);
-        background-size: cover;
+        background-size: 200%;
+        background-position-x: -330px;
         mix-blend-mode: luminosity;
         pointer-events: none;
         transition: all .6s ease;
@@ -527,13 +525,13 @@ button:hover {
     .slogan {
         position: absolute;
         top: 50%;
-        right: .3em;
+        right: .5em;
         transform: translateY(-50%) scale(-1);
         color: #a4a4a4;
         white-space: nowrap;
         writing-mode: vertical-lr;
         text-orientation: mixed;
-        font-size: 12px;
+        font-size: .7em;
         z-index: 50;
     }
 

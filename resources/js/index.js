@@ -130,9 +130,6 @@ window.onload = function () {
 };
 
 
-
-
-
 let exp_skill = document.querySelector(".exp-skill-wrapper");
 let exp_wrapper = document.querySelector(".experience-container");
 let skill_wrapper = document.querySelector(".skill-container");
@@ -264,6 +261,7 @@ function back() {
     exp_wrapper.style.top = 200 + "px";
     skill_wrapper.style.opacity = 0;
     skill_wrapper.style.top = 200 + "px";
+    tt.style.opacity = 1;
     tape.forEach((_t) => {
         _t.style.opacity = 1;
     })
