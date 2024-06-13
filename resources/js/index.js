@@ -219,7 +219,7 @@ function infoUpdate() {
         document.getElementById("back").style.color = "white";
         skill_btn.classList.remove("active");
         exp_btn.classList.add("active");
-        tt.style.opacity = 1;
+        tt.style.opacity = .8;
     } else {
         skill_wrapper.style.opacity = 1;
         skill_wrapper.style.top = 0;
@@ -261,7 +261,7 @@ function back() {
     exp_wrapper.style.top = 200 + "px";
     skill_wrapper.style.opacity = 0;
     skill_wrapper.style.top = 200 + "px";
-    tt.style.opacity = 1;
+    tt.style.opacity = .8;
     tape.forEach((_t) => {
         _t.style.opacity = 1;
     })

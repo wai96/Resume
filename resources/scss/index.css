@@ -109,11 +109,12 @@ button:hover {
   top: 0;
   left: 0;
   background-image: url(../images/texture.png);
-  background-size: 200%;
+  background-size: 180%;
   background-position-x: -330px;
   mix-blend-mode: luminosity;
   pointer-events: none;
   transition: all 0.6s ease;
+  opacity: 0.8;
 }
 .container .exp-skill-wrapper {
   display: none;
@@ -589,12 +590,10 @@ button:hover {
   font-size: 0.5em;
 }
 .container .section .name p .surname {
+  text-shadow: -1.6px -1.6px 0 #000, 1.6px -1.6px 0 #000, -1.6px 1.6px 0 #000, 1.6px 1.6px 0 #000;
   display: inline-block;
   letter-spacing: 2px;
   color: var(--second-color);
-  paint-order: stroke fill;
-  -webkit-text-fill-color: var(--second-color);
-  -webkit-text-stroke: 4px black;
 }
 .container .section .info-wrapper {
   display: flex;

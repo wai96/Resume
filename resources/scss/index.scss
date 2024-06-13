@@ -119,11 +119,12 @@ button:hover {
         top: 0;
         left: 0;
         background-image: url(../images/texture.png);
-        background-size: 200%;
+        background-size: 180%;
         background-position-x: -330px;
         mix-blend-mode: luminosity;
         pointer-events: none;
         transition: all .6s ease;
+        opacity: .8;
     }
 
     .exp-skill-wrapper {
@@ -706,17 +707,13 @@ button:hover {
                 }
 
                 .surname {
-                    // text-shadow: -2px 2px 0 #000,
-                    //     2px 2px 0 #000,
-                    //     2px -2px 0 #000,
-                    //     -2px -2px 0 #000;
+                    text-shadow: -1.6px -1.6px 0 #000, 1.6px -1.6px 0 #000, -1.6px 1.6px 0 #000, 1.6px 1.6px 0 #000;
                     display: inline-block;
                     letter-spacing: 2px;
                     color: var(--second-color);
-                    paint-order: stroke fill;
-                    -webkit-text-fill-color: var(--second-color);
-                    -webkit-text-stroke: 4px black;
-
+                    // -webkit-text-fill-color: var(--second-color);
+                    // -webkit-text-stroke: 4px black;
+                    // paint-order: stroke fill;
                 }
             }
 
